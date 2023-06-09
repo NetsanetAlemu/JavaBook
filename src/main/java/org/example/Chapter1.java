@@ -28,7 +28,6 @@ public class Chapter1 {
             counter++;
         }
 
-        // Algebra
 
     }
 }
