@@ -32,6 +32,6 @@ public class Chapter3Question29 {
             System.out.println("Circle 2 overlaps Circle 1");
         else
             System.out.println("Circle 2 doesn't overlap Circle 1");
-
+        input.close();
         }
 }
