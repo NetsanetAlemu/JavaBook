@@ -16,19 +16,16 @@ public class ComputeAngles {
 
         a = Math.sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));
         b = Math.sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
-        c = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        c = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
 
 
-        A = Math.toDegrees(Math.acos((a * a) - (b * b) - (c * c)) / (-2 * b * c));
-        B = Math.toDegrees(Math.acos((b * b) - (a * a) - (c * c)) / (-2 * a * c));
-        C = Math.toDegrees(Math.acos((c * c) - (b * b) - (a * a)) / (-2 * a * b));
+        A = Math.toDegrees(Math.acos((a * a - b * b - c * c) / (-2 * b * c)));
+        B = Math.toDegrees(Math.acos((b * b - a * a - c * c) / (-2 * a * c)));
+        C = Math.toDegrees(Math.acos((c * c - b * b - a * a) / (-2 * a * b)));
 
         System.out.println("Angle A: " + Math.round(A * 100) / 100.0);
         System.out.println("Angle B: " + Math.round(B * 100) / 100.0);
         System.out.println("Angle C: " + Math.round(C * 100) / 100.0);
-
-
-
 
         input.close();
     }
