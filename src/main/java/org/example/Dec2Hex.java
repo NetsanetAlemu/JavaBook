@@ -24,5 +24,6 @@ public class Dec2Hex {
 
         System.out.println("The hex number is " + hex);
 
+        input.close();
     }
 }
